@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+
+{% block title %}Library - Game Store{% endblock %}
+
+{% block content %}
+    <section class="library">
+        <h2>Your Library</h2>
+        <div class="game_grid">
+            {% for game in library_games %}
+                <article class="grid_item">
+                    <img src="{{ url_for('static', filename=game['image_url']) }}" alt="{{ game['title'] }}">
+                    <div class="game_info">
+                        <h2>{{ game['title'] }}</h2>
+                        <p>{{ game['description'] }}</p>
+                    </div>
+                </article>
+            {% endfor %}
+        </div>
+    </section>
+{% endblock %}

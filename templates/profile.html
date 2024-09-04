@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+
+{% block title %}Profile - Game Store{% endblock %}
+
+{% block content %}
+    <section class="profile">
+        <h2>Login / Register</h2>
+        <form method="POST" action="{{ url_for('login') }}">
+            <label for="username">Username:</label>
+            <input type="text" id="username" name="username" required>
+
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" required>
+
+            <button type="submit">Login</button>
+        </form>
+        <p>Don't have an account? <a href="{{ url_for('register') }}">Register here</a></p>
+    </section>
+{% endblock %}

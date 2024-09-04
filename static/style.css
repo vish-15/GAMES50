@@ -1,0 +1,161 @@
+#top_bar {
+    padding: 16px;
+    background-color: #333; /* Dark header */
+    color: #fff; /* White text */
+    text-align: center; /* Center align text */
+}
+
+#top_bar h1 {
+    margin: 0;
+    font-size: 28px; /* Adjust font size if necessary */
+}
+
+body {
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+    background-color: #121212; /* Dark background */
+    color: #e0e0e0; /* Light text color */
+}
+
+header {
+    background-color: #1f1f1f; /* Darker header background */
+    color: #ffffff;
+    padding: 20px;
+    position: sticky;
+    top: 0;
+    width: 100%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.6);
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2rem;
+    display: inline-block;
+}
+
+nav {
+    display: inline-block;
+    margin-left: 30px;
+}
+
+nav a {
+    color: #e0e0e0;
+    text-decoration: none;
+    margin: 0 15px;
+    font-size: 1.1rem;
+    padding: 5px;
+    border-radius: 4px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+nav a:hover {
+    background-color: #333;
+    color: #ffffff;
+}
+
+main {
+    padding: 20px;
+}
+
+.game_grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
+    justify-content: center;
+}
+
+.grid_item {
+    background: #1e1e1e;
+    border: 1px solid #333;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.7);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.grid_item img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.grid_item:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.8);
+}
+
+.game_info {
+    padding: 15px;
+    text-align: center;
+}
+
+.game_info h2 {
+    margin-top: 0;
+    font-size: 1.4rem;
+    color: #ffffff;
+}
+
+.game_info p {
+    margin: 10px 0;
+    font-size: 1rem;
+    color: #b0b0b0;
+}
+
+.download_button {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 10px 20px;
+    background-color: #ff5722; /* Accent color */
+    color: #ffffff;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 1.1rem;
+    text-align: center;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.download_button:hover {
+    background-color: #e64a19;
+    transform: scale(1.05);
+}
+
+footer {
+    background-color: #1f1f1f;
+    color: #b0b0b0;
+    text-align: center;
+    padding: 20px;
+    position: relative;
+    width: 100%;
+    border-top: 1px solid #333;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 1.5rem;
+    }
+
+    nav a {
+        font-size: 1rem;
+    }
+
+    .grid_item img {
+        height: 180px;
+    }
+
+    .game_info h2 {
+        font-size: 1.2rem;
+    }
+
+    .game_info p {
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 480px) {
+    header h1 {
+        font-size: 1.2rem;
+    }
+
+    nav {
+

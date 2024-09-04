@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+
+{% block title %}Home - Game Store{% endblock %}
+
+{% block content %}
+    <section class="game_grid">
+        {% for game in games %}
+            <article class="grid_item">
+                <img src="{{ url_for('static', filename=game['image_url']) }}" alt="{{ game['title'] }}">
+                <div class="game_info">
+                    <h2>{{ game['title'] }}</h2>
+                    <p>{{ game['description'] }}</p>
+                    <a href="{{ url_for('download', game_id=game['id']) }}" class="download_button">
+                        &#9660; Download
+                    </a>
+                </div>
+            </article>
+        {% endfor %}
+    </section>
+{% endblock %}
